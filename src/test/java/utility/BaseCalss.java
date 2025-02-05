@@ -2,6 +2,7 @@ package utility;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
@@ -10,19 +11,22 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Base {
+public class BaseCalss {
 
 	public static WebDriver driver;
-
+	public static Properties prop;
 	public static WebDriver initilizeDriver() {
-		WebDriverManager.edgedriver().setup();
-		driver = new EdgeDriver();
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+		driver.manage().deleteAllCookies();
 		return driver;
 	}
 
@@ -31,10 +35,9 @@ public class Base {
 	}
 
 	public static Properties getData() throws IOException {
-		FileInputStream fis = new FileInputStream(
-				"C:\\Users\\amarv\\eclipse-workspace\\BDDCucumberSeleniumJava\\src\\test\\resources\\data.properties");
-		Properties prop = new Properties();
-		prop.load(fis);
+		FileReader reader=new FileReader(System.getProperty("user.dir")+"/src/test/resources/data.properties");
+		prop = new Properties();
+		prop.load(reader);
 		return prop;
 	}
 
