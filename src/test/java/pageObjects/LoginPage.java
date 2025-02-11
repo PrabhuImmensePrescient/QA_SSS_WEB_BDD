@@ -34,5 +34,6 @@ public class LoginPage extends CommonFunction {
 		password.sendKeys(Keys.chord(Keys.CONTROL, "a") + Keys.DELETE);
 		username.sendKeys(prop.getProperty("username"));
 		password.sendKeys(prop.getProperty("password"));
+		Loginbtn.click();
 	}
 }

@@ -1,60 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-05T21:52:14 IST" name="Default suite" finished-at="2025-02-05T21:52:24 IST" duration-ms="10235">
+  <suite started-at="2025-02-11T19:29:55 IST" name="Default suite" finished-at="2025-02-11T19:30:09 IST" duration-ms="14420">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestNGTestRunner@38467116]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-02-05T21:52:14 IST" name="Default test" finished-at="2025-02-05T21:52:24 IST" duration-ms="10235">
+    <test started-at="2025-02-11T19:29:55 IST" name="Default test" finished-at="2025-02-11T19:30:09 IST" duration-ms="14420">
       <class name="testRunner.TestNGTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.TestNGTestRunner@38467116]" started-at="2025-02-05T21:52:14 IST" name="setUpClass" finished-at="2025-02-05T21:52:15 IST" duration-ms="984" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRunner.TestNGTestRunner@38467116]" started-at="2025-02-11T19:29:55 IST" name="setUpClass" finished-at="2025-02-11T19:29:56 IST" duration-ms="993" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@18d003cd]]>
+                <![CDATA[org.testng.TestRunner@5f34907b]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestNGTestRunner@38467116]" started-at="2025-02-05T21:52:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-05T21:52:24 IST" duration-ms="9090" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRunner.TestNGTestRunner@38467116]" started-at="2025-02-11T19:29:56 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-11T19:30:09 IST" duration-ms="13267" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User logs into the portal with valid credentials"]]>
+                <![CDATA["Create a user with valid details"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Login Functionality"]]>
+                <![CDATA["List of scenarios."]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Dashboard | Sainik Security Services] but found [Login | Sainik Security Services]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Dashboard | Sainik Security Services] but found [Login | Sainik Security Services]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at stepDefinitions.LoginStepDefinition.user_should_be_redirected_to_the_page(LoginStepDefinition.java:42)
-at ✽.user should be redirected to the "dashboard" page(file:///C:/Users/amarv/eclipse-workspace/SainikSecurityServices/src/test/resources/features/login.feature:6)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.TestNGTestRunner@38467116]" started-at="2025-02-05T21:52:24 IST" name="tearDownClass" finished-at="2025-02-05T21:52:24 IST" duration-ms="90" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRunner.TestNGTestRunner@38467116]" started-at="2025-02-11T19:30:09 IST" name="tearDownClass" finished-at="2025-02-11T19:30:09 IST" duration-ms="89" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
